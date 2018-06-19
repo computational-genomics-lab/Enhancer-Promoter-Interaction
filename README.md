@@ -23,7 +23,7 @@ https://www.gencodegenes.org/gencodeformat.html
 ### Step 4. EPI interaction
 * Map the promoter region with Gencode file to get the gene information of the promoter
 * Filter the enhancer promoter interaction having gene information
-* Map the CTSS get in the in Step 1 in both enhancer and promoter region. Extract those interactions having TSS mapped with both enhancer and promoter regions
+* Map the CTSS get in the in __Step 1__ in both enhancer and promoter region. Extract those interactions having TSS mapped with both enhancer and promoter regions
 * Extract those CTSS mapped with enhancers and having a same genomic location. Then separate out CTSS mapped with enhancer and having a different genomic location. Likewise for genic regions.
 * Next separate all the EPI mapped with CTSSs for all cell lines. (Processed file name “`TPM_gene_enhancer_interactions_Allchr_diff_dominant_non_redundent`” given) 
 ### Step 5. Cluster Analysis and validation
@@ -43,4 +43,4 @@ http://www.regulomedb.org/downloads
  * In the next step extract the EPI of those 71 genes from the file used in __Step 8__ (“`TPM_gene_enhancer_interactions_Allchr_diff_dominant_non_redundent`”)
  * Extend 2000 bp from the TSS location mapped at enhancer and promoter.
  * Map individual SNPs from all the cell lines
- * The Final result has been tabulated in “Contingency_table”.
+ * The Final result has been tabulated in “`Contingency_table`”.
