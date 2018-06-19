@@ -1,5 +1,5 @@
 # Enhancer-Promoter-Interaction
-Step 1. Download CAGE DATA from ENCODE
+##**Step 1**. Download CAGE DATA from ENCODE
 Link : https://genome.ucsc.edu/ENCODE/dataMatrix/encodeDataMatrixHuman.html
 For Gm12878
 wgEncodeRikenCageGm12878CellPapAlnRep1.bam
