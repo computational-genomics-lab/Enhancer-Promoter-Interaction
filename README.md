@@ -27,7 +27,7 @@ https://www.gencodegenes.org/gencodeformat.html
 * Extract those CTSS mapped with enhancers and having a same genomic location. Then separate out CTSS mapped with enhancer and having a different genomic location. Likewise for genic regions.
 * Next separate all the EPI mapped with CTSSs for all cell lines. (Processed file name “TPM_gene_enhancer_interactions_Allchr_diff_dominant_non_redundent” given) 
 ### Step 5. Cluster Analysis and validation
-* Run Clustering_analysis_&_validation.R script on TPM_gene_enhancer_interactions_Allchr_diff_dominant_non_redundent
+* Run `Clustering_analysis_&_validation.R` script on TPM_gene_enhancer_interactions_Allchr_diff_dominant_non_redundent
 * After successful run of above script one will get corrected cluster file (Corrected_cluster_1, Corrected_cluster_2,  Corrected_cluster_3 given)
 ### Step 6. RNA-Seq Analysis 
  * Download RNA-Seq data from __ENCODE__ (Gm12878_1_1, Gm12878_2_1, K562_1_1, K562_2_1, H1hESC_1_1) 
