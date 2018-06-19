@@ -13,7 +13,7 @@ wgEncodeRikenCageH1hescCellPapAlnRep2.bam
 
 Run CAGE_analysis.R on data set of an individual cell to get TPM
 
-Step 2. Download enhancer-promoter interaction from following links
+**Step 2**. Download enhancer-promoter interaction from following links
 http://www.cbrc.kaust.edu.sa/dendb/src/enhancer_interactions.tsv.zip
 
 Step 3. Download Gencode file for human from the following links:
