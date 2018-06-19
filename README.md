@@ -1,4 +1,4 @@
-# Enhancer-Promoter-Interaction
+# Enhancer-Promoter Interaction Analysis
 ### **Step 1**: Download CAGE DATA from ENCODE
 Link : https://genome.ucsc.edu/ENCODE/dataMatrix/encodeDataMatrixHuman.html
 ```
@@ -20,22 +20,21 @@ http://www.cbrc.kaust.edu.sa/dendb/src/enhancer_interactions.tsv.zip
 
 ### Step 3. Download Gencode file for human from the following links:
 https://www.gencodegenes.org/gencodeformat.html
-### Step 4. Map the promoter region with Gencode file to get the gene information of the promoter
-### Step 5. Filter the enhancer promoter interaction having gene information
-### Step 6. Map the CTSS get in the in Step 1 in both enhancer and promoter region. Extract those interactions having TSS mapped with both enhancer and promoter regions
-### Step 7. Extraction of CTSS map data 
-Extract those CTSS mapped with enhancers and having a same genomic location. Then separate out CTSS mapped with enhancer and having a different genomic location. Likewise for genic regions.
-### Step 8. Mapping of CSTSS in EPIs
-Next separate all the EPI mapped with CTSSs for all cell lines. (Processed file name “TPM_gene_enhancer_interactions_Allchr_diff_dominant_non_redundent” given) 
-### Step 9. Cluster Analysis and validation
+### Step 4. EPI interaction
+* Map the promoter region with Gencode file to get the gene information of the promoter
+* Filter the enhancer promoter interaction having gene information
+* Map the CTSS get in the in Step 1 in both enhancer and promoter region. Extract those interactions having TSS mapped with both enhancer and promoter regions
+* Extract those CTSS mapped with enhancers and having a same genomic location. Then separate out CTSS mapped with enhancer and having a different genomic location. Likewise for genic regions.
+* Next separate all the EPI mapped with CTSSs for all cell lines. (Processed file name “TPM_gene_enhancer_interactions_Allchr_diff_dominant_non_redundent” given) 
+### Step 5. Cluster Analysis and validation
 * Run Clustering_analysis_&_validation.R script on TPM_gene_enhancer_interactions_Allchr_diff_dominant_non_redundent
 * After successful run of above script one will get corrected cluster file (Corrected_cluster_1, Corrected_cluster_2,  Corrected_cluster_3 given)
-### Step 10. RNA-Seq Analysis 
+### Step 6. RNA-Seq Analysis 
  * Download RNA-Seq data from __ENCODE__ (Gm12878_1_1, Gm12878_2_1, K562_1_1, K562_2_1, H1hESC_1_1) 
  * Extract the FPKM value from all the file to make a cumulative file (FPKM_All_Cellines).
  * Run Diff_exp_script.R on the file (FPKM_All_Cellines) to get Fold_change. 
  * Save the result accordingly. Like (K562_Gm12878_edgerAnalysis, K562-H1hesc_edgerAnalysis, Gm12878-H1hesc_edgerAnalysis) given in additional files.
-### Step 11. SNP analysis
+### Step 7. SNP analysis
  * Download RegulomeDB from the following link: 
 http://www.regulomedb.org/downloads
 
