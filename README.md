@@ -33,12 +33,12 @@ Run Clustering_analysis_&_validation.R script on TPM_gene_enhancer_interactions_
 ### Step 11. Download RNA-Seq 
 Download RNA-Seq data from ENCODE (Gm12878_1_1, Gm12878_2_1, K562_1_1, K562_2_1, H1hESC_1_1) and extract the FPKM value from all the file to make a cumulative file (FPKM_All_Cellines). Run Diff_exp_script.R on the file (FPKM_All_Cellines) to get Fold_change. Save the result accordingly. Like (K562_Gm12878_edgerAnalysis, K562-H1hesc_edgerAnalysis, Gm12878-H1hesc_edgerAnalysis) given in additional files.
 ### Step 12. SNP analysis
-Download RegulomeDB from the following link: 
+ * Download RegulomeDB from the following link: 
 http://www.regulomedb.org/downloads
 
-Extract the the SNPs information for the corresponding cell lines.
+ * Extract the the SNPs information for the corresponding cell lines.
 
-In the next step extract the EPI of those 71 genes from the file used in Step 8 (“TPM_gene_enhancer_interactions_Allchr_diff_dominant_non_redundent”)
-Extend 2000 bp from the TSS location mapped at enhancer and promoter.
-Map individual SNPs from all the cell lines
-The Final result has been tabulated in “Contingency_table”.
+ * In the next step extract the EPI of those 71 genes from the file used in __Step 8__ (“TPM_gene_enhancer_interactions_Allchr_diff_dominant_non_redundent”)
+ * Extend 2000 bp from the TSS location mapped at enhancer and promoter.
+ * Map individual SNPs from all the cell lines
+ * The Final result has been tabulated in “Contingency_table”.
