@@ -14,6 +14,7 @@ wgEncodeRikenCageH1hescCellPapAlnRep2.bam
 ```
 
 Run `CAGE_analysis.R` on data set of an individual cell to get TPM
+tagCounts for individual cell lines are given in results (`"Gm12878_tagClusters.bed", "K562_tagClusters.bed", "H1hesc_tagClusters.bed"`)
 
 ### **Step 2**. Download enhancer-promoter interaction from following links
 http://www.cbrc.kaust.edu.sa/dendb/src/enhancer_interactions.tsv.zip
@@ -23,7 +24,7 @@ https://www.gencodegenes.org/gencodeformat.html
 ### Step 4. EPI interaction
 * Map the promoter region with Gencode file using `bedtools intersect` to get the gene information of the promoter. Filter the enhancer promoter interaction having gene information
 * Map the CTSS get in the in __Step 1__ in both enhancer and promoter region using `bedtools intersect`. Extract those interactions having TSS mapped with both enhancer and promoter regions
-* Extract those CTSS mapped with enhancers and having a same genomic location. Then separate out CTSS mapped with enhancer and having a different genomic location. Likewise for genic regions.
+* Extract those CTSS mapped with enhancers and having a same genomic location. Then separate out CTSS mapped with enhancer and having a different genomic location. Likewise for genic regions (files are given in results `"intersect_tagClusters_Gm12878_K562_H1hesc_mapped_with_gene_TC_notsame_dominant_cluster"`, `"intersect_tagClusters_Gm12878_K562_H1hesc_mapped_with_gene_TC_same_dominant_cluster"`, `"intersect_tagClusters_Gm12878_K562_H1hesc_not-mapped_with_gene_TC_notsame_dominant_cluster"`, `"intersect_tagClusters_Gm12878_K562_H1hesc_not-mapped_with_gene_TC_same_dominant_cluster"`).
 * Next separate all the EPI mapped with CTSSs for all cell lines. (Processed file name “`TPM_gene_enhancer_interactions_Allchr_diff_dominant_non_redundent`” given in data) 
 ### Step 5. Cluster Analysis and validation
 * Run `Clustering_analysis_&_validation.R` script on `TPM_gene_enhancer_interactions_Allchr_diff_dominant_non_redundent`
