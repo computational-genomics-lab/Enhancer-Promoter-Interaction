@@ -41,5 +41,5 @@ http://www.regulomedb.org/downloads
 
  * In the next step extract the EPI of those 71 genes from the file used in __Step 8__ (“`TPM_gene_enhancer_interactions_Allchr_diff_dominant_non_redundent`”).
  * Extend 2000 bp from the TSS location mapped at enhancer and promoter.
- * Map individual SNPs from all the cell lines using "`bedtools intersect`".
+ * Map individual SNPs (`"GM12878_RegulomeDB", "K562_RegulomeDB", "H1hesc_RegulomeDB"` given in data) from all the cell lines using "`bedtools intersect`".
  * The Final result has been tabulated in “`Contingency_table`” (file is given as suppliment file S3 in main manuscript).
