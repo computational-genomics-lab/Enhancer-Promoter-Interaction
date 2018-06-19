@@ -1,5 +1,5 @@
 # Enhancer-Promoter-Interaction
-## **Step 1**. Download CAGE DATA from ENCODE
+### **Step 1**. Download CAGE DATA from ENCODE
 Link : https://genome.ucsc.edu/ENCODE/dataMatrix/encodeDataMatrixHuman.html
 For Gm12878
 wgEncodeRikenCageGm12878CellPapAlnRep1.bam
@@ -13,12 +13,12 @@ wgEncodeRikenCageH1hescCellPapAlnRep2.bam
 
 Run CAGE_analysis.R on data set of an individual cell to get TPM
 
-**Step 2**. Download enhancer-promoter interaction from following links
+### **Step 2**. Download enhancer-promoter interaction from following links
 http://www.cbrc.kaust.edu.sa/dendb/src/enhancer_interactions.tsv.zip
 
-Step 3. Download Gencode file for human from the following links:
+### Step 3. Download Gencode file for human from the following links:
 https://www.gencodegenes.org/gencodeformat.html
-Step 4. Map the promoter region with Gencode file to get the gene information of the promoter
+## Step 4. Map the promoter region with Gencode file to get the gene information of the promoter
 Step 5. Filter the enhancer promoter interaction having gene information
 Step 6. Map the CTSS get in the in Step 1 in both enhancer and promoter region. Extract those interactions having TSS mapped with both enhancer and promoter regions
 Step 7. Extract those CTSS mapped with enhancers and having a same genomic location. Then separate out CTSS mapped with enhancer and having a different genomic location. Likewise for genic regions.
