@@ -1,8 +1,8 @@
 # Enhancer-Promoter-Interaction
 ### **Step 1**: Download CAGE DATA from ENCODE
 Link : https://genome.ucsc.edu/ENCODE/dataMatrix/encodeDataMatrixHuman.html
-
-`For Gm12878
+```
+For Gm12878
 wgEncodeRikenCageGm12878CellPapAlnRep1.bam
 wgEncodeRikenCageGm12878CellPapAlnRep2.bam
 For K562
@@ -10,7 +10,8 @@ wgEncodeRikenCageK562CellPapAlnRep1.bam
 wgEncodeRikenCageK562CellPapAlnRep2.bam
 For H1hESC
 wgEncodeRikenCageH1hescCellPapAlnRep1.bam
-wgEncodeRikenCageH1hescCellPapAlnRep2.bam`
+wgEncodeRikenCageH1hescCellPapAlnRep2.bam
+```
 
 Run CAGE_analysis.R on data set of an individual cell to get TPM
 
