@@ -1,0 +1,38 @@
+library(biomaRt)
+ensembl = useMart("ensembl", dataset = "hsapiens_gene_ensembl")
+mapping <- getBM(attributes = c("ensembl_gene_id", "hgnc_symbol","entrezgene"), mart = ensembl)
+write.table(mapping,file = "ensg.tsv", sep = "\t")
+#uniprots <- Rkeys(org.Hs.egUNIPROT)[1:5]
+#select(org.Hs.eg.db, uniprots, "ENTREZID", "UNIPROT")
+#################################################################################################################
+########## cluster profiler step:
+library(org.Hs.eg.db)
+library(clusterProfiler)
+dat1 = readLines("t1")
+dat2 = readLines("h1")
+dat3 = readLines("h2")
+dat4 = readLines("h3")
+dat5 = readLines("h4")
+dat6 = readLines("h5")
+dat7 = readLines("h6")
+
+#mylistt<-list(c_1_2=dat,c_1_2_3=dat1,c_1_3 = dat2 ,c_2_3 = dat3,  e_c_1= dat4,e_c_2=dat5,e_c_3=dat6)
+mylistt<-list(e_c_1 = dat1, e_c_2 = dat2, e_c_3 = dat3 ,c_1_2 = dat4,  c_1_3 = dat5)
+ck <- compareCluster(geneCluster = mylistt, fun = "enrichKEGG")
+dotplot(ck)
+write.table(ck@compareClusterResult,file="h1esc_cluster.tsv",sep ="\t")
+ggo <- groupGO(gene = dat,OrgDb = org.Hs.eg.db,ont = "MF",level = 3,readable = TRUE)
+barplot(ggo, drop=TRUE, showCategory=25)
+write.table(ggo@result,file="cc.tsv",sep ="\t")
+
+ego <- enrichGO(gene = dat,OrgDb = org.Hs.eg.db,ont = "MF",pAdjustMethod = "BH",pvalueCutoff  = 0.01,qvalueCutoff  = 0.05,readable = TRUE)
+barplot(ego, showCategory=25)
+dotplot(ego)
+enrichMap(ego)
+cnetplot(ego, categorySize="pvalue", foldChange=geneList)
+plotGOgraph(ego)
+##############################################################################################################################################
+kk <- enrichKEGG(gene = gene,organism = 'hsa', pvalueCutoff = 0.05)
+browseKEGG(kk, 'hsa04110')
+library("pathview")
+hsa04110 <- pathview(gene.data  = geneList,pathway.id = "hsa04110",species = "hsa",limit = list(gene=max(abs(geneList)), cpd=1))
